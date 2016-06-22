@@ -3,13 +3,13 @@
 ## Environment
 This repository contains a snap shot (v1.5 June 2016) of [esp-open-sdk](https://github.com/pfalcon/esp-open-sdk) and [Sming](https://github.com/SmingHub/Sming) for OSX.
 Rather than a homebrew install, the setup sits in its own directory (opt) with all tools resolved via environment varables.
-The following variables need setting via a source command.
+The following variables need setting via a source command. You will propbably need to install serial drivers for your Serail USB chip.
 
 ```bash
 # use source ./setenv
-export ESP_HOME=/Users/Andrew/sming/opt/esp-open-sdk
-export SMING_HOME=/Users/Andrew/sming/opt/sming/Sming
-export PATH=$PATH:/Users/Andrew/sming/opt/esp-open-sdk/utils
+export ESP_HOME=~/IOT/opt/esp-open-sdk
+export SMING_HOME=~/IOT/opt/sming/Sming
+export PATH=$PATH:~/IOT/opt/esp-open-sdk/utils
 # export COM_PORT=/dev/cu.usbserial-A400f4um # Programmer
 export COM_PORT=/dev/cu.SLAB_USBtoUART # NodeMCU
 export ESPTOOL=$ESP_HOME/utils/esptool.py
