@@ -1,4 +1,8 @@
 /* Script for ld -r: link without relocation */
+/* Copyright (C) 2014 Free Software Foundation, Inc.
+   Copying and distribution of this script, with or without modification,
+   are permitted in any medium without royalty provided the copyright
+   notice and this notice are preserved.  */
  /* For some reason, the Solaris linker makes bad executables
   if gld -r is used and the intermediate file has sections starting
   at non-zero addresses.  Could be a Solaris ld bug, could be a GNU ld

@@ -1,6 +1,10 @@
 /* Script for --shared -z combreloc: shared library, combine & sort relocs */
+/* Copyright (C) 2014 Free Software Foundation, Inc.
+   Copying and distribution of this script, with or without modification,
+   are permitted in any medium without royalty provided the copyright
+   notice and this notice are preserved.  */
 ENTRY(_start)
-SEARCH_DIR("/Users/build/workspace/xtensa-lx106-elf/label/build-osx-01/xtensa-lx106-elf/xtensa-lx106-elf/lib");
+SEARCH_DIR("=/Volumes/case-sensitive/esp-open-sdk/xtensa-lx106-elf/xtensa-lx106-elf/lib"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */
