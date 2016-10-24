@@ -5,9 +5,10 @@
 #include <Libraries/DS18S20/ds18s20.h>
 
 // The influx database UDP address and port
-#define SERVER_IP IPAddress(192, 168, 0, 38)
-//#define SERVER_IP IPAddress(172, 20, 10, 2)
-#define SERVER_PORT 8089
+//#define SERVER_IP IPAddress(192, 168, 0, 38)
+#define SERVER_IP IPAddress(172, 20, 10, 2)
+//#define SERVER_PORT 8089 // Influx
+#define SERVER_PORT 8099 // Gateway
 
 // Class handles 0..4 D18x20 sensors
 DS18S20 ReadTemp;
