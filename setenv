@@ -1,8 +1,0 @@
-export ESP_HOME=~/IOT/opt/esp-open-sdk
-export SMING_HOME=~/IOT/opt/sming/Sming
-export PATH=$PATH:~/IOT/opt/esp-open-sdk/utils
-export COM_PORT=/dev/cu.usbserial-A400f4um # Programmer
-# export COM_PORT=/dev/cu.SLAB_USBtoUART # NodeMCU
-export ESPTOOL=$ESP_HOME/utils/esptool.py
-export WIFI_SSID=Inara
-export WIFI_PWD=8pd9ynu5b6zwi
