@@ -3,7 +3,7 @@
 ## Environment
 This repository contains a snap shot (v1.5 June 2016) of [esp-open-sdk](https://github.com/pfalcon/esp-open-sdk) and [Sming](https://github.com/SmingHub/Sming) for OSX.
 Rather than a homebrew install, the setup sits in its own directory (opt) with all tools resolved via environment varables.
-The following variables need setting via a source command.
+The projects use [influx](https://influxdata.com/) to log data. These are installed via brew on OSX.
 
 ### You will propbably need to install serial drivers for your Serail USB chip on Mac OS.
 Programmer based on ftdi chip [http://www.ftdichip.com/Drivers/VCP.htm](http://www.ftdichip.com/Drivers/VCP.htm)
@@ -30,8 +30,6 @@ export WIFI_PWD=yourpassword
 ```
 
 After `source ./setenv` - `make` and `make flash` should now work within a project directory. 
-
-The projects use [influx](https://influxdata.com/) to log data. These are installed via brew on OSX.
 
 ## Gateway written in Node
 Gateway maps 8 byte sensor IDs to friendly tag names.
