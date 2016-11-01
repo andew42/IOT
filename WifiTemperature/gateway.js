@@ -2,7 +2,10 @@
 var mapping =
 {
     "28ffcf2b7215010c" : "Train",
-    "284c570400008050" : "HW Tank Center"
+    "284c570400008050" : "HW Tank Center",
+    "286e570400008088" : "HW Tank Flow",
+    "28be37260000802a" : "Pump",
+    "28c76a040000802a" : "Rad Flow at Pump"
 };
 
 // IP:Port sensor network is sending on

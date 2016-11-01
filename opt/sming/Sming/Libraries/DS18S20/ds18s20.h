@@ -10,7 +10,7 @@
 
 #include "../../SmingCore/Wire.h"
 
-#define MAX_SENSORS 4         //how many sensors reads up max
+#define MAX_SENSORS 8         //how many sensors reads up max
 
 // OneWire commands
 

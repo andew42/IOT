@@ -5,12 +5,12 @@
 #include <Libraries/DS18S20/ds18s20.h>
 
 // The influx database UDP address and port
-//#define SERVER_IP IPAddress(192, 168, 0, 38)
-#define SERVER_IP IPAddress(172, 20, 10, 2)
-//#define SERVER_PORT 8089 // Influx
-#define SERVER_PORT 8099 // Gateway
+#define SERVER_IP IPAddress(192, 168, 0, 14)
+//#define SERVER_IP IPAddress(172, 20, 10, 2)
+#define SERVER_PORT 8089 // Influx
+//#define SERVER_PORT 8099 // Gateway
 
-// Class handles 0..4 D18x20 sensors
+// Class handles 0..8 D18x20 sensors
 DS18S20 ReadTemp;
 
 // Trigger sample and send data
@@ -45,7 +45,7 @@ void readData() {
 
   // Send all tempratures as a single message, sending a message per reading
   // resulted in some packet loss, particularly for the latter messages
-  char msg[256];
+  char msg[512];
   msg[0] = 0;
 
   // foreach sensor
