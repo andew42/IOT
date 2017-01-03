@@ -10,6 +10,8 @@ Programmer based on ftdi chip [http://www.ftdichip.com/Drivers/VCP.htm](http://w
 
 Node MCU board [https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx](https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx)
 
+Small NodeMCU board [https://blog.sengotta.net/signed-mac-os-driver-for-winchiphead-ch340-serial-bridge/](https://blog.sengotta.net/signed-mac-os-driver-for-winchiphead-ch340-serial-bridge/)
+
 ### Installing python serial package on Mac OS for 'make flash'
 ```bash
 sudo easy_install pip
@@ -23,7 +25,8 @@ export ESP_HOME=~/IOT/opt/esp-open-sdk
 export SMING_HOME=~/IOT/opt/sming/Sming
 export PATH=$PATH:~/IOT/opt/esp-open-sdk/utils
 # export COM_PORT=/dev/cu.usbserial-A400f4um # Programmer
-export COM_PORT=/dev/cu.SLAB_USBtoUART # NodeMCU
+# export COM_PORT=/dev/cu.SLAB_USBtoUART # NodeMCU
+export COM_PORT=/dev/cu.wchusbserial1410 # Small NodeMCU
 export ESPTOOL=$ESP_HOME/utils/esptool.py
 export WIFI_SSID=yourssid
 export WIFI_PWD=yourpassword

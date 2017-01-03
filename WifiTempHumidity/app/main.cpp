@@ -14,8 +14,8 @@
 // Class handles 0..8 D18x20 sensors
 DS18S20 ReadTemp;
 
-// Humidity and Temprature Sensor (pin 5)
-DHT dht(5);
+// Humidity and Temprature Sensor (pin D2 GPIO4 10K pullup)
+DHT dht(4, DHT22);
 bool dhtIintialised = false;
 
 // Trigger sample and send data
@@ -69,6 +69,8 @@ void readData() {
     strcat(msg, cid);
     strcat(msg, " value=");
     strcat(msg, dtostrf(th.humid, 0, 4, value));
+  } else {
+        Serial.printf("DHT Sensor Read Failed:%d\n", dht.getLastError());
   }
 
   // If measurement is still in progress skip this cycle
@@ -156,8 +158,8 @@ void init() {
   WifiAccessPoint.enable(false);
   WifiStation.waitConnection(onConnected, 20, connectFail);
 
-  // Start reading temperature on pin 2 (takes 1.2s per sensor)
-  ReadTemp.Init(2);
+  // Start reading temperature on pin 12 (D6) (takes 1.2s per sensor)
+  ReadTemp.Init(12);
   ReadTemp.StartMeasure();
 
   // Read new temperature every 15 seconds
