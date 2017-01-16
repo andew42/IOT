@@ -2,19 +2,27 @@
 var mapping =
 {
     "28ffcf2b7215010c" : "Train",
-    "284c570400008050" : "HW Tank Center",
-    "286e570400008088" : "HW Tank Flow",
-    "28be37260000802a" : "Pump",
-    "28c76a040000802a" : "Rad Flow at Pump"
+
+    "280f41040000809c" : "HW Tank Middle",
+    "284c570400008050" : "HW Tank Primary Flow",
+    "286b3a26000080e9" : "Sitting Room",
+    "286e570400008088" : "HW Tank Primary Return",
+    "2882b9270000805c" : "Radiator Flow",
+    "28be37260000802a" : "Boiler Flow at Pump",
+    "28bebb270000804f" : "HW Tank Control",
+    "28c76a040000802a" : "HW Tank Top",
+
+    "28089304000080c4" : "Garage Internal",
+    "00933274"         : "Garage External"
 };
 
-// IP:Port sensor network is sending on
-var SRC_HOST = '172.20.10.2';
-var SRC_PORT = 8099;
+// IP:Port sensor network is sending on (influx db default)
+var SRC_HOST = '192.168.0.14';
+var SRC_PORT = 8089;
 
-// IP:Port influx is listening on
-var DST_HOST = '172.20.10.2';
-var DST_PORT = 8089;
+// IP:Port influx is listening on (default + 1)
+var DST_HOST = '192.168.0.14';
+var DST_PORT = 8090;
 
 // ====================== THE CODE ======================
 
@@ -29,7 +37,7 @@ server.on('listening', function () {
 
 // Regular expression to extract id from sensor message format:
 // temperature,id=28ffcf2b7215010c value=25.6250
-var re = /(.*id=)([0123456789abcdef]{16})(.*)/;
+var re = /(.*id=)([0123456789abcdef]+)( .*)/;
 server.on('message', function (message, remote) {
     // Extract the sensor id
     var rc = re.exec(message);

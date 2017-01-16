@@ -8,8 +8,7 @@
 // The influx database UDP address and port
 #define SERVER_IP IPAddress(192, 168, 0, 14)
 //#define SERVER_IP IPAddress(172, 20, 10, 2)
-#define SERVER_PORT 8089 // Influx
-//#define SERVER_PORT 8099 // Gateway
+#define SERVER_PORT 8089
 
 // Class handles 0..8 D18x20 sensors
 DS18S20 ReadTemp;
