@@ -13,7 +13,10 @@ var mapping =
         "28c76a040000802a": "HW-Tank-Top",
 
         "28089304000080c4": "Garage-Internal",
-        "00933274": "Garage-External"
+        "00933274": "Garage-External",
+
+        "f001dc791": "Loft-BMP180",
+        "001dc791": "Loft-DHT22"
     };
 
 // IP:Port sensor network is sending on (influx db default)
